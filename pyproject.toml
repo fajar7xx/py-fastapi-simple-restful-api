@@ -1,0 +1,22 @@
+[project]
+name = "py-fastapi-restful-api-crud"
+version = "1.0.0"
+authors = [
+    {name = "Fajar Siagian"}
+]
+maintainers = [
+    {name = "Fajar Siagian"}
+]
+description = "python 3.11 using fastapi for restful api"
+readme =  "README.md"
+requires-python = ">=3.11"
+
+dependencies = [
+    "fastapi[standard]>=0.113.0",
+    "pydantic==2.8.0"
+]
+
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
