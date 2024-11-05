@@ -9,14 +9,33 @@ maintainers = [
 ]
 description = "python 3.11 using fastapi for restful api"
 readme =  "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.10"
 
 dependencies = [
     "fastapi[standard]>=0.113.0",
-    "pydantic==2.8.0"
+    "pydantic==2.8.0",       # Data validation
+    "requests>=2.31.0",
 ]
 
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",        # Testing framework
+    "black>=24.1.0",        # Code formatter
+    "ruff>=0.1.14",         # Linter yang cepat
+]
 
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+# [build-system]
+# requires = ["hatchling"]
+# build-backend = "hatchling.build"
+
+# # Konfigurasi untuk formatter Black
+# [tool.black]
+# line-length = 88            # Panjang maksimum baris kode
+# target-version = ["py311"]  # Versi Python target
+
+# # Konfigurasi untuk linter Ruff
+# [tool.ruff]
+# line-length = 88
+# target-version = "py311"
+# # Rules yang diaktifkan
+# select = ["E", "F", "I"]    # E=pycodestyle, F=pyflakes, I=isort
